@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* header */
+header {
+  background-color: #ffe48d;
+}
+#logo {
+  width: 200px;
+}
+#botones_accion {
+  display: flex;
+  float: right;
+  width: 250px;
+  height: 110px;
+  align-items: center;
+}
+
+.boton {
+  background-color: #ffcb21;
+  width: auto;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #dbc479;
+}
+/* Main */
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #ffe48d;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
