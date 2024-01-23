@@ -1,11 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: large;
 }
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("Imagenes/maderaavif.avif");
+  background-color: #833e0c;
 }
 /* header */
 header {
@@ -31,6 +34,22 @@ header {
   border: 1px solid #dbc479;
 }
 /* Main */
+main {
+  display: flex;
+  justify-content: center;
+}
+#imagen {
+  filter: blur(8px);
+  margin: 10px;
+}
+#bienvenida {
+  background-color: aliceblue;
+  opacity: 0.8;
+  position: absolute;
+  top: 150px;
+  width: 50%;
+  border-radius: 5px;
+}
 
 /* Footer */
 footer {
