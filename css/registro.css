@@ -1,9 +1,16 @@
 form {
-  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 10px;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  background-image: url("/Imagenes/para_usar/pergamino.png");background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 600px;
 }
 form > div small {
   display: none;

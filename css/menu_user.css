@@ -3,3 +3,38 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+main {
+  display: block !important;
+}
+/* #titulo_menu {
+  background-color: aliceblue;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+} */
+h1 {
+  font-size: xx-large !important;
+}
+/* Img menu */
+#mapa {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+#mapa img {
+  margin: 10px;
+  width: 700px;
+  border-radius: 10px;
+}
+#barco {
+  text-align: center;
+  width: 50%;
+  float: right;
+}
+#barco img {
+  width: 700px;
+}
