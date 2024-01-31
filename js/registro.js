@@ -24,6 +24,7 @@ registro.addEventListener("click", (e) => {
   console.log(usuario);
 
   localStorage.setItem(usuario.email, JSON.stringify(usuario));
+  sessionStorage.setItem("userLoged", JSON.stringify(usuario));
   console.log(localStorage.getItem(usuario.email));
-  window.location.href = "html/menu_user.html";
+  window.location.href = "/html/menu_user.html";
 });

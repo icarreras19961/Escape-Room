@@ -18,3 +18,8 @@ form > div small {
 form > div{
   margin: 5px;
 }
+
+h1{
+  font-size: xx-large;
+  color: rgb(103, 49, 10);
+}
