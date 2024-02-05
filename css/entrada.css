@@ -1,0 +1,20 @@
+body {
+  background-image: url("/Imagenes/puerta.webp") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  height: min-content;
+}
+#entrada {
+  margin-top: 75px;
+  background-image: url("/Imagenes/para_usar/puerta\ mazmorra1.png");
+  height: 500px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#entrada:hover {
+  background-image: url("/Imagenes/para_usar/puerta\ mazmorra2.png");
+}
