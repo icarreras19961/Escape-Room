@@ -1,0 +1,197 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size:50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url("/Imagenes/para_usar/mazmorra\ 2.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+h1 {
+  margin: 20px;
+}
+
+
+img {
+  width: 25%;
+  height: auto;
+  margin: 5px;
+  border-radius: 15px;
+  position: absolute;
+  left: 10%;
+  box-shadow: 1px 2px 5px 2px rgba(8, 19, 36, 0.2);
+}
+.contenedor-intentos {
+  display: flex;
+  align-items: center;
+  background-color: rgba(108, 109, 108, 0.95);
+  border-radius: 5px;
+  width: 20%;
+  height: 120px;
+  padding: 5px;
+}
+.intentos {
+  color: crimson;
+}
+
+.palabra-secreta {
+  text-align: center;
+}
+
+#analfabeto {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  justify-content: center;
+}
+.letra {
+  background-color: rgba(108, 109, 108, 0.95);;
+  border-radius: 15px;
+  padding: 2px;
+  margin: 5px;
+  width: 50px;
+  float: left;
+}
+
+.letra:hover {
+  transform: scale(1.1);
+  background-color: rgba(93, 93, 93, 0.95);
+  box-shadow: 1px 2px 5px 2px rgba(8, 19, 36, 0.2);
+  cursor: pointer;
+}
+
+.letra.error {
+  background-color: crimson;
+}
+
+.letra.acierto {
+  background-color: greenyellow;
+  color: #3d5b96;
+}
+.letra.acierto,
+.error:hover {
+  transform: scale(1);
+  box-shadow: 0px 0px 0px 0px rgba(8, 19, 36, 0.2);
+  cursor: default;
+}
+
+.cronometro {
+  border: 5px solid #3d5b96;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+  color: #3d5b96;
+}
+
+#lahora {
+  border: 2px solid #3d5b96;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+hr {
+  margin: 5px;
+  border: 1.5px solid #4c71b9;
+  border-radius: 10px;
+}
+
+.boton {
+  background-color: #4c71b9;
+  border: 2px solid #3d5b96;
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+}
+.boton:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 2px 5px 2px rgba(8, 19, 36, 0.2);
+  background-color: #3d5b96;
+  cursor: pointer;
+}
+
+/* POP_UP */
+.envoltorio-popup {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.popup {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 10% auto;
+  background: #6599ff;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+}
+
+.popup a {
+  background: crimson;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+#imagen-popup {
+  box-shadow: 1px 2px 5px 2px rgba(8, 19, 36, 0.2);
+
+  left: 5px;
+}
+.cerrar-popup {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+}
+/**popUp ganar*/
+.envoltorio-popup-ganar {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.cerrar-popup-ganar {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+}
+/** popUp Elegir tema*/
+.envoltorio-popup-eligeTema {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.cerrar-popup-eligeTema {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+}

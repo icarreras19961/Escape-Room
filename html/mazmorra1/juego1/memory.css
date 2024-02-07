@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/Imagenes/para_usar/mazmorra\ 1.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#bodyMem {
+  margin: 10px;
+  border-radius: 10px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.frog {
+  text-align: center;
+  border: 2px solid rgb(37, 37, 37);
+  border-radius: 10%;
+  margin: 10px;
+  height: 200px;
+  width: 170px;
+  background-color: rgba(108, 109, 108, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number {
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: none;
+}
+
+.check span,
+.check ~ span {
+  display: block;
+}
+.runa {
+  width: 140px;
+
+}

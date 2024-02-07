@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" />
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+ 
+  <img id="imagen" src="img/fallo0.png" alt="" srcset="">
+  <div class="contenedor-intentos">
+    <p>
+      Elije una letra, te quedan
+      <span class="intentos">7</span>
+    </p>
+  </div>
+  <div class="palabra-secreta"></div>
+
+  <div id="analfabeto">
+    <div class="letra">A</div>
+    <div class="letra">B</div>
+    <div class="letra">C</div>
+    <div class="letra">D</div>
+    <div class="letra">E</div>
+    <div class="letra">F</div>
+    <div class="letra">G</div>
+    <div class="letra">H</div>
+    <div class="letra">I</div>
+    <div class="letra">J</div>
+    <div class="letra">K</div>
+    <div class="letra">L</div>
+    <div class="letra">M</div>
+    <div class="letra">N</div>
+    <div class="letra">Ñ</div>
+    <div class="letra">O</div>
+    <div class="letra">P</div>
+    <div class="letra">Q</div>
+    <div class="letra">R</div>
+    <div class="letra">S</div>
+    <div class="letra">T</div>
+    <div class="letra">U</div>
+    <div class="letra">V</div>
+    <div class="letra">W</div>
+    <div class="letra">X</div>
+    <div class="letra">Y</div>
+    <div class="letra">Z</div>
+  </div>
+
+
+  <div class="cronometro">
+
+    <div id="lahora">00:00:00</div>
+    <hr>
+    <button class="boton" id="start">Start</button>
+    <button class="boton" id="stop">Stop</button>
+    <button class="boton" id="reset">Reset</button>
+  </div>
+  <div class="envoltorio-popup">
+    <div class="popup">
+      <div class="cerrar-popup">x</div>
+      <div class="contenido-popup">
+        <h2>Has Perdido :C</h2>
+        <img id="imagen-popup" src="img/hasPerdido.png" alt="" srcset="">
+        <hr>
+        <h3>La palabra era:</h3>
+        <p id="pop-up-palabraSecreta"></p>
+        <hr>
+        <p id="record"></p>
+        <hr>
+        <p>¿Quieres volver a Jugar?</p>
+        <a class="volver-a-jugar" href="#">Volver a Jugar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="envoltorio-popup-ganar">
+    <div class="popup">
+      <div class="cerrar-popup-ganar">x</div>
+      <div class="contenido-popup">
+        <h2>Has Ganado :D</h2>
+        <hr>
+        <p id="pRecord"></p>
+        <hr>
+        <p>¿Quieres volver a Jugar?</p>
+        <a class="volver-a-jugar-ganar" href="#">Volver a Jugar</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

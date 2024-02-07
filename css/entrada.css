@@ -3,18 +3,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 main {
   height: min-content;
 }
 #entrada {
   margin-top: 75px;
+  margin-left: 15px;
   background-image: url("/Imagenes/para_usar/puerta\ mazmorra1.png");
   height: 500px;
   width: 400px;
   background-repeat: no-repeat;
   background-size: cover;
+  color: transparent;
 }
 #entrada:hover {
   background-image: url("/Imagenes/para_usar/puerta\ mazmorra2.png");
+  color: aliceblue;
+}
+#entrada p{
+  margin-top: 70%;
+  font-size: xx-large;
+  margin-left: 45%;
 }
