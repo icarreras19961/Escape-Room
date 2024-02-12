@@ -4,17 +4,21 @@ let tries = [];
 let selecFrog = [];
 let ntries = 0;
 let score = 0;
+let perder = 0;
 let body = document.getElementById("bodyMem");
+let nperder = document.getElementById("nperder");
 if (ncards % 2 != 0) {
   ncards++;
 }
 
 rellenador(arrayJuego, ncards);
-console.log(arrayJuego);
+// console.log(arrayJuego);
 
 //Fill the desk with the frogs
 for (let i = 1; i <= ncards; i++) {
-  body.innerHTML += `<div class="frog"><span class="number"><img class="runa" src="letraschinas/${arrayJuego[i - 1]}.png" alt="">${arrayJuego[i - 1]}</span></div>`;
+  body.innerHTML += `<div class="frog"><span class="number"><img class="runa" src="letraschinas/${
+    arrayJuego[i - 1]
+  }.png" alt="">${arrayJuego[i - 1]}</span></div>`;
 }
 
 //Fill the array with random numbers that are extract on the half of the ncard value
@@ -36,7 +40,7 @@ let rana = document.getElementsByClassName("frog");
 
 for (let i = 0; i <= ncards; i++) {
   rana[i].addEventListener("click", (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     e.target.classList.add("check");
     tries[ntries] = e.target.innerText;
     selecFrog[ntries] = e.target;
@@ -59,7 +63,7 @@ function analizator(tries, selecFrog) {
       tries.splice(0, tries.length);
     }, 500);
   }
-  console.log(tries);
+  // console.log(tries);
 }
 
 function comprobador(tries, selecFrog) {
@@ -71,8 +75,11 @@ function comprobador(tries, selecFrog) {
   } else {
     selecFrog[0].classList.remove("check");
     selecFrog[1].classList.remove("check");
+    perder++;
+    nperder.innerText = 10 - perder;
   }
+
   if (score == ncards / 2) {
-    alert("You Win :D");
+    window.location.href = "/html/mazmorra1/juego2/index.html";
   }
 }

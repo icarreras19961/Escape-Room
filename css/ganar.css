@@ -1,0 +1,29 @@
+body{
+  background-image: url("/Imagenes/sala_tesoro.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#ganar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffe48d;
+  height: 450px;
+  width: 600px;
+  margin-top: 50px;
+  opacity: 0.9;
+  border: 3px solid #ffd754;
+  border-radius: 20px;
+}
+#Ganado{
+  font-size:100px;
+}
+hr{
+  width: 90%;
+  border: 2px dotted #fdc716;
+}
+#btn_ganar{
+  font-size:40px;
+
+}
