@@ -27,19 +27,6 @@ let record = {
 };
 let pRecord = document.getElementById("pRecord");
 //Pop up variables
-//Perder
-const envoltorio = document.getElementsByClassName("envoltorio-popup");
-const volverJugar = document.getElementsByClassName("volver-a-jugar");
-const cerrar = document.getElementsByClassName("cerrar-popup");
-let popUpPalabraSecreta = document.getElementById("pop-up-palabraSecreta");
-//Ganar
-const envoltorioGanar = document.getElementsByClassName(
-  "envoltorio-popup-ganar"
-);
-const cerrarGanar = document.getElementsByClassName("cerrar-popup-ganar");
-const volverJugarGanar = document.getElementsByClassName(
-  "volver-a-jugar-ganar"
-);
 
 //EVENTOS
 
@@ -55,24 +42,6 @@ analfabeto.addEventListener("click", (e) => {
     console.log(e.target.innerText);
     comprobador(e);
   }
-});
-
-//eventos del popup
-cerrar[0].addEventListener("click", () => {
-  envoltorio[0].style.display = "none";
-});
-volverJugar[0].addEventListener("click", () => {
-  envoltorio[0].style.display = "none";
-  location.reload();
-});
-
-//Eventos ganar
-volverJugarGanar[0].addEventListener("click", () => {
-  envoltorioGanar[0].style.display = "none";
-  location.reload();
-});
-cerrarGanar[0].addEventListener("click", () => {
-  envoltorioGanar[0].style.display = "none";
 });
 
 //FUNCIONES
@@ -137,10 +106,10 @@ function comprobador(e) {
     if (intento.innerText <= 0) {
       imagen.src = `img/hasPerdido.png.png`;
       console.log("has perdido");
-      popUpPalabraSecreta.innerHTML = palabraSecreta;
-      envoltorio[0].style.display = "block";
+      
       parar();
       recordLocalStorage(record);
+      window.location.href = "/html/mazmorra1/perder/perder.html";
     }
   }
   escribidor();
@@ -149,9 +118,10 @@ function comprobador(e) {
     console.log("Has ganado");
     // console.log(envoltorio[0]);
     // console.log(envoltorioGanar[0]);
-    envoltorioGanar[0].style.display = "block";
+
     parar();
     recordLocalStorage(record);
+    window.location.href = "/html/mazmorra1/ganar/ganar.html";
   }
 }
 //Lo que se introduce en el localstorage
@@ -180,7 +150,7 @@ function recordLocalStorage(puntuacionActual) {
     nuevoRecord.tiempoEmpleado;
   localStorage.setItem(palabraSecreta, JSON.stringify(nuevoRecord));
   console.log(record);
-  pRecord.innerHTML = record;
+  
 }
 function escribidor() {
   console.log(letrasCifradas);

@@ -76,10 +76,14 @@ function comprobador(tries, selecFrog) {
     selecFrog[0].classList.remove("check");
     selecFrog[1].classList.remove("check");
     perder++;
-    nperder.innerText = 10 - perder;
+    nperder.innerText = 15 - perder;
   }
 
   if (score == ncards / 2) {
     window.location.href = "/html/mazmorra1/juego2/index.html";
+  }
+
+  if (perder == 15) {
+    window.location.href = "/html/mazmorra1/perder/perder.html";
   }
 }

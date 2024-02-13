@@ -45,5 +45,10 @@ body {
 }
 .runa {
   width: 140px;
+}
 
+#intentos {
+  text-align: center;
+  color: white;
+  font-size: 50px;
 }

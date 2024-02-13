@@ -22,3 +22,15 @@ logOut.addEventListener("click", (e) => {
   sessionStorage.removeItem("userLoged");
   window.location.href = "/html/formularios/signIn/sign_in.html";
 });
+
+// la imagen del barco
+let imagen_barco = document.getElementById("imagen_barco");
+
+if (userLoged.partidas.nivel_1 == true) {
+  imagen_barco.setAttribute(
+    "src",
+    "/Imagenes/para_usar/pirate-menu_nivel1.png"
+  );
+} else {
+  imagen_barco.setAttribute("src", "/Imagenes/para_usar/pirate-menu.png");
+}
