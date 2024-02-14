@@ -34,3 +34,13 @@ if (userLoged.partidas.nivel_1 == true) {
 } else {
   imagen_barco.setAttribute("src", "/Imagenes/para_usar/pirate-menu.png");
 }
+
+// Loro
+let loro = document.getElementById("loro");
+let loro_text = document.getElementById("loro_text");
+loro.addEventListener("click", (e) => {
+  loro_text.style.display = "block";
+  setInterval(() => {
+    loro_text.style.display = "none";
+  }, 5000);
+});

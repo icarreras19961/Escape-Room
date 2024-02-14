@@ -38,3 +38,30 @@ h1 {
 #barco img {
   width: 700px;
 }
+#loro {
+  position: absolute;
+  width: 90px;
+  margin-left: 56%;
+  margin-top: 410px;
+  cursor: pointer;
+}
+#loro_text {
+  display: none;
+  position: absolute;
+  margin-left: 47.5%;
+  margin-top: 310px;
+  background-color: aliceblue;
+  width: 200px;
+  height: 120px;
+  padding: 4px;
+  border-radius: 5px;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}
