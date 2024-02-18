@@ -16,7 +16,7 @@ boton_sign_in.addEventListener("click", (e) => {
     if (usuario.email == email.value && usuario.contrasena == password.value) {
       
       sessionStorage.setItem("userLoged", JSON.stringify(usuario));
-      window.location.href = "/html/menu_user.html";
+      window.location.href = "../html/menu_user.html";
     } else {
       error_login.style.display = "block";
     }
