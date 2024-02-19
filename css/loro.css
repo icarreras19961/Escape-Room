@@ -1,0 +1,28 @@
+#loro {
+  position: absolute;
+  width: 200px;
+  left: 85%;
+  top: 580px;
+  cursor: pointer;
+  border: none;
+}
+#loro_text {
+  display: none;
+  position: absolute;
+  left: 82.5%;
+  top: 600px;
+  background-color: aliceblue;
+  width: 200px;
+  height: 120px;
+  padding: 4px;
+  border-radius: 5px;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}

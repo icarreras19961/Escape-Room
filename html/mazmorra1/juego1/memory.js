@@ -11,6 +11,16 @@ if (ncards % 2 != 0) {
   ncards++;
 }
 
+// El texto del loro
+let loro = document.getElementById("loro");
+let loro_text = document.getElementById("loro_text");
+
+loro.addEventListener("click", (e) => {
+  loro_text.style.display = "block";
+  setInterval(() => {
+    loro_text.style.display = "none";
+  }, 10000);
+});
 rellenador(arrayJuego, ncards);
 // console.log(arrayJuego);
 
@@ -87,3 +97,4 @@ function comprobador(tries, selecFrog) {
     window.location.href = "../perder/perder.html";
   }
 }
+
