@@ -21,5 +21,5 @@ registro.addEventListener("click", (e) => {
   localStorage.setItem(userLoged.email, JSON.stringify(userLoged));
   sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
   console.log(localStorage.getItem(userLoged.email));
-  window.location.href = "/html/menu_user.html";
+  window.location.href = "menu_user.html";
 });

@@ -1,5 +1,5 @@
 body{
-  background-image: url("/Imagenes/sala_tesoro.avif");
+  background-image: url("../Imagenes/sala_tesoro.avif");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -109,7 +109,7 @@ function comprobador(e) {
       
       parar();
       recordLocalStorage(record);
-      window.location.href = "/html/mazmorra1/perder/perder.html";
+      window.location.href = "../perder/perder.html";
     }
   }
   escribidor();
@@ -121,7 +121,7 @@ function comprobador(e) {
 
     parar();
     recordLocalStorage(record);
-    window.location.href = "/html/mazmorra1/ganar/ganar.html";
+    window.location.href = "../ganar/ganar.html";
   }
 }
 //Lo que se introduce en el localstorage

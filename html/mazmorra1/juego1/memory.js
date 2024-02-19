@@ -80,10 +80,10 @@ function comprobador(tries, selecFrog) {
   }
 
   if (score == ncards / 2) {
-    window.location.href = "/html/mazmorra1/juego2/index.html";
+    window.location.href = "../juego2/index.html";
   }
 
   if (perder == 15) {
-    window.location.href = "/html/mazmorra1/perder/perder.html";
+    window.location.href = "../perder/perder.html";
   }
 }
