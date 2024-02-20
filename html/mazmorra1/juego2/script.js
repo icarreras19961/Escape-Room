@@ -4,19 +4,22 @@ let divSecreto = document.querySelector(".palabra-secreta");
 let intento = document.querySelector(".intentos");
 let imagen = document.getElementById("imagen");
 let ListaJSON;
+let trampa = document.getElementById("trampa");
 let listaPalabras = [
-  "Hola",
-  "adios",
-  "patata",
-  "zapato",
-  "libro",
-  "carta",
-  "mesopotamia",
-  "esdrujula",
-  "lapiz",
-  "agua",
-  "estuche",
-  "supercalifragilisticoespiralidoso",
+  "barco",
+  "capitan",
+  "tripulacion",
+  "tesoro",
+  "pirata",
+  "isla",
+  "galeon",
+  "cañon",
+  "bergantin",
+  "mazmorra",
+  "parche",
+  "pala",
+  "mapa",
+  "cubierta",   
 ];
 let palabraSecreta;
 let letrasCifradas;
@@ -48,7 +51,12 @@ analfabeto.addEventListener("click", (e) => {
 //Elije la palabra secreta que se va a utilizar
 function PalabraSecreta() {
   let indexPalabraSecreta = Math.floor(Math.random() * listaPalabras.length);
+  let indexPalabraSecretatrampa = Math.floor(
+    Math.random() * listaPalabras.length
+  );
   //   console.log(indesPalabraSecreta);
+ let trampaText = listaPalabras[indexPalabraSecretatrampa];
+  trampa.innerText=trampaText;
   palabraSecreta = listaPalabras[indexPalabraSecreta];
   console.log(palabraSecreta);
   cifrador(palabraSecreta);
@@ -106,10 +114,10 @@ function comprobador(e) {
     if (intento.innerText <= 0) {
       imagen.src = `img/hasPerdido.png.png`;
       console.log("has perdido");
-      
+
       parar();
       recordLocalStorage(record);
-      window.location.href = "../perder/perder.html";
+      window.location.href = "../../perder.html";
     }
   }
   escribidor();
@@ -121,7 +129,7 @@ function comprobador(e) {
 
     parar();
     recordLocalStorage(record);
-    window.location.href = "../ganar/ganar.html";
+    window.location.href = "../../ganar.html";
   }
 }
 //Lo que se introduce en el localstorage
@@ -150,7 +158,6 @@ function recordLocalStorage(puntuacionActual) {
     nuevoRecord.tiempoEmpleado;
   localStorage.setItem(palabraSecreta, JSON.stringify(nuevoRecord));
   console.log(record);
-  
 }
 function escribidor() {
   console.log(letrasCifradas);
@@ -163,6 +170,17 @@ function escribidor() {
     }
   }
 }
+
+//El texto del loro
+let loro = document.getElementById("loro");
+let loro_text = document.getElementById("loro_text");
+
+loro.addEventListener("click", (e) => {
+  loro_text.style.display = "block";
+  setInterval(() => {
+    loro_text.style.display = "none";
+  }, 10000);
+});
 
 // function cronometor() {
 //VARIABLES DEL CRONOMETRO

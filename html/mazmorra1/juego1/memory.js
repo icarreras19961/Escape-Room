@@ -94,7 +94,7 @@ function comprobador(tries, selecFrog) {
   }
 
   if (perder == 15) {
-    window.location.href = "../perder/perder.html";
+    window.location.href = "../../perder.html";
   }
 }
 

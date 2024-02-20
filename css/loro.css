@@ -10,7 +10,9 @@
   display: none;
   position: absolute;
   left: 82.5%;
+  font-size: medium;
   top: 600px;
+  color: black;
   background-color: aliceblue;
   width: 200px;
   height: 120px;
@@ -25,4 +27,9 @@
     50% 75%,
     0% 75%
   );
+
+}
+#trampa{
+  font-size: x-large;
+  
 }
