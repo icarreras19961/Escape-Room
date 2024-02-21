@@ -1,0 +1,35 @@
+body{
+  background-image: url("../../../Imagenes/para_usar/mazmorra\ 1.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center; 
+  align-items: center; 
+}
+main{
+  height: 500px;
+  width: 600px;
+  padding: 10px;
+  background-color: #fff6db;
+  flex-direction: column;
+  align-items: center;
+}
+#mostrar{
+  width: 150px;
+
+}
+#grupo{
+  text-align: center;
+  background-color: #fdde77;
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #dbc479;
+}
+#resultado{
+  background-color: aliceblue;
+  border: 5px solid rgb(199, 199, 199);
+  border-radius: 5px;
+  padding: 5px;
+}
