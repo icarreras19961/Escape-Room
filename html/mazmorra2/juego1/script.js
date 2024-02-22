@@ -3,30 +3,19 @@ let n1 = document.getElementById("n1");
 let n2 = document.getElementById("n2");
 let n3 = document.getElementById("n3");
 let mostrar = document.getElementById("mostrar");
+let contrario = document.getElementById("contrario");
 let nRand;
 let lista = ["piedra", "papel", "tijera"];
 let palabraRival;
 let nSelect = "papel";
+let resultado = document.getElementById("resultado");
 let cont = 0;
 
 // El juego como tal
-
-// Lista de la palabra del rival
-nRand = Math.floor(Math.random() * lista.length);
-palabraRival = lista[nRand];
-
-// Tus selectores
-n1.addEventListener("click", (e) => {
-  juego(e.target.value);
-});
-n2.addEventListener("click", (e) => {
-  juego(e.target.value);
-});
-n3.addEventListener("click", (e) => {
-  juego(e.target.value);
-});
-
 function juego(nSelect) {
+  nRand = Math.floor(Math.random() * lista.length);
+  palabraRival = lista[nRand];
+  contrario.innerHTML = `<img src="../../../Imagenes/${palabraRival}.png" alt="">`;
   // Resultado
   console.log("yo " + nSelect);
   console.log("Rival " + palabraRival);
@@ -54,7 +43,8 @@ function juego(nSelect) {
     console.log("Ganas");
     cont++;
   }
-
+  resultado.innerHTML =  `<img src="img/${cont}.png" alt="">`
+  console.log(cont);
   if (cont == 3) {
     window.location.href = "../../ganar.html";
   }
