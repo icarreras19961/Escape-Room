@@ -1,4 +1,5 @@
 // Variables
+let userLoged = JSON.parse(sessionStorage.getItem("userLoged"));
 let n1 = document.getElementById("n1");
 let n2 = document.getElementById("n2");
 let n3 = document.getElementById("n3");
@@ -10,6 +11,15 @@ let palabraRival;
 let nSelect = "papel";
 let resultado = document.getElementById("resultado");
 let cont = 0;
+let loro = document.getElementById("loro");
+let loro_text = document.getElementById("loro_text");
+let puntuacion = 300;
+loro.addEventListener("click", (e) => {
+  loro_text.style.display = "block";
+  setInterval(() => {
+    loro_text.style.display = "none";
+  }, 5000);
+});
 
 // El juego como tal
 function juego(nSelect) {
@@ -32,6 +42,7 @@ function juego(nSelect) {
   ) {
     console.log("pierdes");
     cont--;
+    puntuacion -= 30;
   }
 
   //Ganas
@@ -42,10 +53,13 @@ function juego(nSelect) {
   ) {
     console.log("Ganas");
     cont++;
+    puntuacion += 30;
   }
-  resultado.innerHTML =  `<img src="img/${cont}.png" alt="">`
+  resultado.innerHTML = `<img src="img/${cont}.png" alt="">`;
   console.log(cont);
   if (cont == 3) {
+    userLoged.puntuacion.nivel_2 = puntuacion;
+    sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
     window.location.href = "../../ganar.html";
   }
   if (cont == -3) {

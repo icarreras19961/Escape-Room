@@ -10,6 +10,8 @@ main{
   height: 500px;
   width: 600px;
   padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #dbc479;
   background-color: #fff6db;
   flex-direction: column;
   align-items: center;

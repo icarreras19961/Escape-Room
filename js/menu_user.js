@@ -31,7 +31,13 @@ if (userLoged.partidas.nivel_1 == true) {
     "src",
     "../Imagenes/para_usar/pirate-menu_nivel1.png"
   );
-} else {
+  if (userLoged.partidas.nivel_2 == true) {
+    imagen_barco.setAttribute(
+      "src",
+      "../Imagenes/para_usar/pirate-menu_nivel2.png"
+    );
+  }
+} else  {
   imagen_barco.setAttribute("src", "../Imagenes/para_usar/pirate-menu.png");
 }
 

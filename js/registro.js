@@ -5,6 +5,11 @@ let usuario = {
   email: "",
   edad: "",
   contrasena: "",
+  puntuacion: {
+    nivel_1: 0,
+    nivel_2: 0,
+    nivel_3: 0,
+  },
   partidas: {
     nivel_1: false,
     nivel_2: false,

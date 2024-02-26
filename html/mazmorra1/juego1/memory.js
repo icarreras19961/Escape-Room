@@ -1,3 +1,5 @@
+let userLoged = JSON.parse(sessionStorage.getItem("userLoged"));
+
 let ncards = 20;
 let arrayJuego = [];
 let tries = [];
@@ -7,6 +9,7 @@ let score = 0;
 let perder = 0;
 let body = document.getElementById("bodyMem");
 let nperder = document.getElementById("nperder");
+let puntuacion = 225;
 if (ncards % 2 != 0) {
   ncards++;
 }
@@ -87,9 +90,12 @@ function comprobador(tries, selecFrog) {
     selecFrog[1].classList.remove("check");
     perder++;
     nperder.innerText = 15 - perder;
+    puntuacion = puntuacion - 15;
   }
 
   if (score == ncards / 2) {
+    userLoged.puntuacion.nivel_1 = puntuacion;
+    sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
     window.location.href = "../juego2/index.html";
   }
 
@@ -97,4 +103,3 @@ function comprobador(tries, selecFrog) {
     window.location.href = "../../perder.html";
   }
 }
-

@@ -1,4 +1,5 @@
 // VARIABLES
+let userLoged = JSON.parse(sessionStorage.getItem("userLoged"));
 let analfabeto = document.getElementById("analfabeto");
 let divSecreto = document.querySelector(".palabra-secreta");
 let intento = document.querySelector(".intentos");
@@ -19,7 +20,7 @@ let listaPalabras = [
   "parche",
   "pala",
   "mapa",
-  "cubierta",   
+  "cubierta",
 ];
 let palabraSecreta;
 let letrasCifradas;
@@ -29,6 +30,7 @@ let record = {
   tiempoEmpleado: "",
 };
 let pRecord = document.getElementById("pRecord");
+let puntuacion = userLoged.puntuacion.nivel_1 + 75;
 //Pop up variables
 
 //EVENTOS
@@ -55,8 +57,8 @@ function PalabraSecreta() {
     Math.random() * listaPalabras.length
   );
   //   console.log(indesPalabraSecreta);
- let trampaText = listaPalabras[indexPalabraSecretatrampa];
-  trampa.innerText=trampaText;
+  let trampaText = listaPalabras[indexPalabraSecretatrampa];
+  trampa.innerText = trampaText;
   palabraSecreta = listaPalabras[indexPalabraSecreta];
   console.log(palabraSecreta);
   cifrador(palabraSecreta);
@@ -111,6 +113,7 @@ function comprobador(e) {
     imagen.src = `img/fallo${intento.innerText}.png`;
     e.target.classList.add("error");
     console.log(intento.innerText);
+    puntuacion = puntuacion - 7;
     if (intento.innerText <= 0) {
       imagen.src = `img/hasPerdido.png.png`;
       console.log("has perdido");
@@ -129,6 +132,9 @@ function comprobador(e) {
 
     parar();
     recordLocalStorage(record);
+    userLoged.puntuacion.nivel_1 = puntuacion;
+    sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
+
     window.location.href = "../../ganar.html";
   }
 }
