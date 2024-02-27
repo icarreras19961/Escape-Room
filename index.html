@@ -33,7 +33,8 @@
       <hr>
       <p>
         Te damos la bienvenida al archipielago de Parrotial, un lugar lleno de misterios y grandes tesoros pirata.
-        Forma tu propia tripulacion y capitanea un barco alrededor de las islas y coje "prestados" los tesoros de las na diferentes mazmorras que te encuentres. 
+        Forma tu propia tripulacion y capitanea un barco alrededor de las islas y coje "prestados" los tesoros de las na
+        diferentes mazmorras que te encuentres.
       </p>
       <hr>
       <p>
@@ -46,6 +47,14 @@
   </main>
 
   <footer>Un footer muy currado</footer>
+  <script>
+    let globalPoints = JSON.stringify([{
+      puntos: 0,
+      name: "test",
+      date: new Date().toLocaleDateString("en-GB"),
+    }]);
+    localStorage.setItem("globalPoints", globalPoints);
+  </script>
 </body>
 
 </html>

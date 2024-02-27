@@ -58,8 +58,20 @@ function juego(nSelect) {
   resultado.innerHTML = `<img src="img/${cont}.png" alt="">`;
   console.log(cont);
   if (cont == 3) {
-    userLoged.puntuacion.nivel_2 = puntuacion;
-    sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
+    if (userLoged.puntuacion.nivel_2 <= puntuacion) {
+      userLoged.puntuacion.nivel_2 = puntuacion;
+      sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
+      let piezaPuntos = {
+        puntos: puntuacion,
+        nivel: 2,
+        name: userLoged.nombre,
+        date: new Date().toLocaleDateString("en-GB"),
+      };
+      let globalPoints = JSON.parse(localStorage.getItem("globalPoints"));
+      console.log(globalPoints);
+      globalPoints.push(piezaPuntos);
+      localStorage.setItem("globalPoints", JSON.stringify(globalPoints));
+    }
     window.location.href = "../../ganar.html";
   }
   if (cont == -3) {

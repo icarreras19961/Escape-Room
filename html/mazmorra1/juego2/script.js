@@ -132,9 +132,20 @@ function comprobador(e) {
 
     parar();
     recordLocalStorage(record);
-    userLoged.puntuacion.nivel_1 = puntuacion;
-    sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
-
+    if (userLoged.puntuacion.nivel_1 <= puntuacion) {
+      userLoged.puntuacion.nivel_1 = puntuacion;
+      sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
+      let piezaPuntos = {
+        puntos: puntuacion,
+        nivel: 1,
+        name: userLoged.nombre,
+        date: new Date().toLocaleDateString("en-GB"),
+      };
+      let globalPoints = JSON.parse(localStorage.getItem("globalPoints"));
+      console.log(globalPoints);
+      globalPoints.push(piezaPuntos);
+      localStorage.setItem("globalPoints", JSON.stringify(globalPoints));
+    }
     window.location.href = "../../ganar.html";
   }
 }
