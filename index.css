@@ -22,7 +22,7 @@ header {
 #botones_accion {
   display: flex;
   float: right;
-  width: 300px;
+  width: 400px;
   height: 110px;
   align-items: center;
 }

@@ -23,6 +23,12 @@ logOut.addEventListener("click", (e) => {
   window.location.href = "../html/formularios/signIn/sign_in.html";
 });
 
+// La pantalla de puntos
+let points = document.getElementById("points");
+points.addEventListener("click", (e) => {
+  window.location.href = "../html/puntos.html";
+});
+
 // la imagen del barco
 let imagen_barco = document.getElementById("imagen_barco");
 
@@ -37,7 +43,12 @@ if (userLoged.partidas.nivel_1 == true) {
       "../Imagenes/para_usar/pirate-menu_nivel2.png"
     );
   }
-} else  {
+} else if (userLoged.partidas.nivel_2 == true) {
+  imagen_barco.setAttribute(
+    "src",
+    "../Imagenes/para_usar/pirate-menu_nivel1.png"
+  );
+} else {
   imagen_barco.setAttribute("src", "../Imagenes/para_usar/pirate-menu.png");
 }
 

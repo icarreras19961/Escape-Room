@@ -53,12 +53,15 @@ function juego(nSelect) {
   ) {
     console.log("Ganas");
     cont++;
-    puntuacion += 30;
+    puntuacion += 20;
   }
   resultado.innerHTML = `<img src="img/${cont}.png" alt="">`;
   console.log(cont);
+  console.log(puntuacion);
+
   if (cont == 3) {
-    if (userLoged.puntuacion.nivel_2 <= puntuacion) {
+    
+    // if (userLoged.puntuacion.nivel_2 < puntuacion) {
       userLoged.puntuacion.nivel_2 = puntuacion;
       sessionStorage.setItem("userLoged", JSON.stringify(userLoged));
       let piezaPuntos = {
@@ -71,7 +74,7 @@ function juego(nSelect) {
       console.log(globalPoints);
       globalPoints.push(piezaPuntos);
       localStorage.setItem("globalPoints", JSON.stringify(globalPoints));
-    }
+    // }
     window.location.href = "../../ganar.html";
   }
   if (cont == -3) {
