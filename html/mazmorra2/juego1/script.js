@@ -14,12 +14,21 @@ let cont = 0;
 let loro = document.getElementById("loro");
 let loro_text = document.getElementById("loro_text");
 let puntuacion = 300;
+
+// loro
 loro.addEventListener("click", (e) => {
   loro_text.style.display = "block";
   setInterval(() => {
     loro_text.style.display = "none";
   }, 5000);
 });
+// Casita
+let casita = document.getElementById("casita");
+casita.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "../../menu_user.html";
+});
+
 
 // El juego como tal
 function juego(nSelect) {

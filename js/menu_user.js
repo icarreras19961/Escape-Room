@@ -1,6 +1,6 @@
 //Para k no se me cuele nadie que no este iniciado sesion
 if (sessionStorage.getItem("userLoged") == null) {
-  window.location.href = "../html/formularios/signIn/sign_in.html";
+  // window.location.href = "../html/formularios/signIn/sign_in.html";
 }
 //La apertura del sesion storage
 let userLoged = JSON.parse(sessionStorage.getItem("userLoged"));

@@ -27,6 +27,13 @@ loro.addEventListener("click", (e) => {
 rellenador(arrayJuego, ncards);
 // console.log(arrayJuego);
 
+// Casita
+let casita = document.getElementById("casita");
+casita.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "../../menu_user.html";
+});
+
 //Fill the desk with the frogs
 for (let i = 1; i <= ncards; i++) {
   body.innerHTML += `<div class="frog"><span class="number"><img class="runa" src="letraschinas/${

@@ -41,8 +41,9 @@ h1 {
 #loro {
   position: absolute;
   width: 90px;
-  margin-left: 56%;
-  margin-top: 410px;
+  left: 1050px;
+  /* margin-left: 56%; */
+  top: 520px;
   cursor: pointer;
 }
 #loro_text {
